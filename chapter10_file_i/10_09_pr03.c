@@ -17,10 +17,10 @@ int main()
         while (c != EOF)
         {
 
-            putc(c, ptw);
+            fputc(c, ptw);
             c = fgetc(ptr);
         }
-        putc('\n', ptw);
+        fputc('\n', ptw);
 
         fclose(ptr);
         count++;
