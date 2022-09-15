@@ -1,18 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int snakeWaterGun(char you, char comp)
 {
     // returns 1 if you win, -1 if you loose, 0 if draw;
-    //cases
-    //ss-
-    //sw-
-    //sg-
-    //gg-
-    //gs-
-    //gw-
-    //ww-
-    //ws-
-    //wg-
+    // cases
+    // ss-
+    // sw-
+    // sg-
+    // gg-
+    // gs-
+    // gw-
+    // ww-
+    // ws-
+    // wg-
     if (you == comp)
     {
         return 0;
@@ -41,16 +43,30 @@ int snakeWaterGun(char you, char comp)
     {
         return -1;
     }
-   
-   
 }
 int main()
 {
     char you, comp;
-    comp = 'w';
+    int number;
+    srand(time(0));
+    number = rand() % 100 + 1;
+    if (number < 33)
+    {
+        comp = 's';
+    }
+    else if (number > 33 && number < 66)
+    {
+        comp = 'w';
+    }
+    else
+    {
+        comp = 'g';
+    }
+
     printf("enter 's' for snake, 'w' for water and 'g' for gun\n");
     scanf("%c", &you);
     int result = snakeWaterGun(you, comp);
+    printf("comp was %c\n",comp);
     if (result == 0)
     {
         printf("draw\n");
