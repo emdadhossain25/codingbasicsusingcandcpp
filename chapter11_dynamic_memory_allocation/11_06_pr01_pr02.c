@@ -16,6 +16,7 @@ int main()
     {
         printf("the %d element is: %d\n", i + 1, ptr[i]);
     }
+    free(ptr);
 
     return 0;
 }
