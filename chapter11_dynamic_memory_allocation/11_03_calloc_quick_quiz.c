@@ -5,9 +5,12 @@
 
 int main(){
     int *ptr;
-    ptr = (int *)calloc(5,sizeof(int));
+    int n;
+    printf("how many integers do you want to enter?\n");
+    scanf("%d",&n);
+    ptr = (int *)calloc(n,sizeof(int));
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("enter %d element:\n",i+1);
         scanf("%d",&ptr[i]);
@@ -15,9 +18,10 @@ int main(){
     
 
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("element %d is: %d\n",i+1,ptr[i]);
     }
+    free(ptr);
     return 0;
 }
