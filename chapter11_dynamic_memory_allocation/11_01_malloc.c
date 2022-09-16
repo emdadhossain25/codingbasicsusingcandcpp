@@ -1,7 +1,7 @@
 // malloc() -> stands for memory allocation takes an input of number of bytes and returns a pointer of type void
 // calloc() -> contineous blocks of memory has two inputs (int, sizeof(int))
 // free() -> de allocate the memory/ free the memory
-// realloc()
+// realloc() -> is used to re allocate the memory size using previous pointer;
 
 #include <stdio.h>
 #include <stdlib.h>
